@@ -10,7 +10,7 @@
   <meta property="og:title" content="DotShot">
   <meta property="og:description" content="A fast, precise, oddly satisfying tap-timing arcade game.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://dotshot.app/og-image.png">
+  <meta property="og:image" content="https://dotshot.app/images/ss1-opening.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Smart App Banner (add your real app id once live) -->
   <meta name="apple-itunes-app" content="app-id=0000000000">
@@ -20,9 +20,14 @@
 
   <header class="container nav">
     <div class="brand">
-      <img src="/favicon.svg" alt="DotShot logo" width="28" height="28"/>
+      <img src="/images/icon.png" alt="DotShot logo" width="28" height="28"/>
       <strong>DotShot</strong>
     </div>
+    <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <nav class="links">
       <a href="/">Home</a>
       <a href="/support.html">Support</a>
@@ -33,16 +38,22 @@
 
 <main class="container main">
   <div class="hero">
-    <span class="badge">New</span>
     <h1>Precision. Speed. <br/>One perfect tap.</h1>
     <p class="small">DotShot is a fast, precise, oddly satisfying tap‑timing arcade game. Hit perfects, chain multipliers, and climb the leaderboard.</p>
     <div class="cta">
-      <a class="button" href="#" aria-label="Download on the App Store">
-        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17 6c-1 .6-2.5 1-3.7 1C12 7 11 6 11 4.8c.9-.2 2-.9 2.6-1.7C14.6 1.7 15.7 1 17 1c-.1 1-.7 2-1.7 2.7c.8.1 1.6.1 2.5-.1C17.5 4.7 17.3 5.4 17 6M12.8 8.4C14.5 8.4 16 7 17 7c1.2 0 2.1.7 2.7 1.5c-1.6 1-2.6 2.5-2.6 4.6c0 2.9 2.4 3.8 2.4 3.8s-1.3 3.8-3.2 3.8c-.8 0-1.4-.6-2.4-.6s-1.6.6-2.5.6C9.2 20.7 7 16.7 7 13.5C7 10.6 9 8.4 11.7 8.4c.4 0 .7 0 1.1 0Z"/></svg>
-        App Store
+      <a href="#" aria-label="Download on the App Store">
+        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1704067200" alt="Download on the App Store" style="height: 60px; width: auto;">
       </a>
-      <a class="button" href="/privacy.html">Privacy Policy</a>
-      <a class="button" href="/support.html">Get Support</a>
+    </div>
+  </div>
+
+  <div class="screenshots">
+    <h2>See it in action</h2>
+    <div class="screenshot-grid">
+      <img src="/images/ss1-opening.png" alt="DotShot opening screen" class="screenshot">
+      <img src="/images/ss2-challenge.png" alt="DotShot challenge mode" class="screenshot">
+      <img src="/images/ss3-boost.png" alt="DotShot boost powerup" class="screenshot">
+      <img src="/images/ss4-themes.png" alt="DotShot themes selection" class="screenshot">
     </div>
   </div>
 
@@ -69,6 +80,25 @@
     <div>© 2025 DotShot</div>
     <div class="small">Built with love and lots of tiny circles.</div>
   </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const nav = document.querySelector('.links');
+    
+    mobileMenuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      mobileMenuToggle.classList.toggle('active');
+    });
+    
+    // Close menu when clicking on a link
+    document.querySelectorAll('.links a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        mobileMenuToggle.classList.remove('active');
+      });
+    });
+  </script>
 
 </body>
 </html>
