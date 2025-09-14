@@ -1,0 +1,17 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DotShot logo">
+  <defs>
+    <radialGradient id="g1" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="45%" stop-color="#9ad1ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#7c5cff" stop-opacity="0.0"/>
+    </radialGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c5cff"/>
+      <stop offset="100%" stop-color="#16d9fa"/>
+    </linearGradient>
+  </defs>
+  <rect rx="26" ry="26" width="128" height="128" fill="#0f0f18"/>
+  <circle cx="64" cy="64" r="50" fill="url(#g1)"/>
+  <circle cx="64" cy="64" r="22" fill="#ffffff"/>
+  <circle cx="64" cy="64" r="38" fill="none" stroke="url(#g2)" stroke-width="8" stroke-dasharray="24 18" stroke-linecap="round"/>
+</svg>
